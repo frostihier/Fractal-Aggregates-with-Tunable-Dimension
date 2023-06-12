@@ -19,6 +19,6 @@ The program is designed to create a fractal aggregate cluster consisting of 2^o 
 
 The procedure is as follows: first a cluster is created and its radius of gyration calculated, then a second cluster is created and the radius of gyration calculated.  From the two Rg, a distance 'gamma' can now be determined in which the two centres of mass of the clusters should lie. After the clusters are moved to this distance, they rotate until they touch but do not overlap. After successful connection, the two clusters form a new larger cluster. The radius of gyration of the new clsuter can be calculated from the Rg of the previous old clusters. This sequence can be repeated until the desired cluster size is reached. For details see also tomchuk et al. 
 
-Afterwards the one-dimensional structure factor of the cluster is computed and plottet  
+Afterwards the one-dimensional structure factor of the cluster is computed and plotted  
 
 
