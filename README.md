@@ -12,7 +12,7 @@ Required Python-libraries: Numpy, Scipy, Matplotlib, Pytorch, math, random, Nump
 
 ## DESCRIPTION 
 
-The code presented here is based on the appraches of Tomchuk et al.
+The code presented here is based on the work of Tomchuk et al.
 https://www.sciencedirect.com/science/article/abs/pii/S0927775720309249?via%3Dihub
 
 The program is designed to create a fractal aggregate cluster consisting of 2^o particles. The fractal dimension of the cluster, which is related to the compactness, can be tuned with the simulation parameters D and k. The procedure for creating the clusters is hierarchical: clusters of the same size are combined to form larger clusters, where the algorithm does not require any kinetic calculations at all.
