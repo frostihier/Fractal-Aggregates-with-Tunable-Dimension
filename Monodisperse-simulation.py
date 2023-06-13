@@ -249,25 +249,23 @@ def compute_quat_rot(vector, axis, theta):
 
 
 
-# rotiere cluster sodass sie sich nur berühren aber nicht überlappen
-
-# vollführe mit Quaternion berechnung
-# # rotiere Cluster um 'angle' in Grad
+# actual rotation of each particle around the center of mass
+# gets as input the axis and the angle in degrees
 def rotate_cluster_quat(polymere, axis, theta):
     polymere_new = copy.deepcopy(polymere)
 
-    # center of mass des clusters, um das rotiert wird
+    # center of mass of the cluster 
     com_new = center_of_mass(polymere_new)
 
-    # Rotation durchführen
+    # rotation of each particle in cluster 
     for particle in polymere_new:
-        # Berechne die relative Position des Partikels zum Center of Mass
+        # compute relative position of particles to the COM
         rel_pos = particle.pos - com_new
 
-        # Rotiere die relative Position zuerst um phi in der x-Achse und danach um theta in der y-Achse
+        # rotate relative position with quaternion computation
         rotated_rel_pos = compute_quat_rot(rel_pos, axis, theta)
 
-        # Addiere die gedrehte relative Position zum Center of Mass, um die neue Position des Partikels zu erhalten
+        # Add the rotated relative position to the centre of mass to get the new position of the particle
         particle.pos = rotated_rel_pos + com_new
 
     return polymere_new
