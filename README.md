@@ -2,7 +2,7 @@
 Program to create a hierachical fractal cluster to mimic the arrangement of synaptic vesicles.  
 
 
-## RECOMMENDAION TO RUN THE SCRIPTS
+## RECOMMENDATION TO RUN THE SCRIPTS
 
 The scripts were executed with Pycharm and in cell mode. The cell delimiters are marked by two consecutive number-signs ##.
 
